@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas de Bayas</title>
+</head>
+<body>
+    <h1>Estadísticas de Bayas</h1>
+
+    <h2>Nombre de las bayas:</h2>
+    <ul>
+        {% for berry_name in berries_names %}
+            <li>{{ berry_name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Estadísticas de tiempo de crecimiento:</h2>
+    <p>Mínimo: {{ min_growth_time }}</p>
+    <p>Mediana: {{ median_growth_time }}</p>
+    <p>Máximo: {{ max_growth_time }}</p>
+    <p>Varianza: {{ variance_growth_time }}</p>
+    <p>Media: {{ mean_growth_time }}</p>
+    <p>Frecuencia: {{ frequency_growth_time }}</p>
+
+    <h2>Histograma de tiempos de crecimiento de bayas:</h2>
+    {{ histogram_html|safe }}
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Virtual environment
+env/
+
+# Compiled Python files
+*.pyc
+__pycache__/
+
+# Log files
+*.log
+
